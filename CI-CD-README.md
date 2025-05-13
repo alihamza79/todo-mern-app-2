@@ -8,7 +8,7 @@ This document explains how to set up Continuous Integration and Continuous Deplo
 
 Add the following secrets to your GitHub repository (Settings > Secrets and variables > Actions):
 
-1. `DOCKER_USERNAME`: Your Docker Hub username (husnain239)
+1. `DOCKER_USERNAME`: Your Docker Hub username (alihamza79)
 2. `DOCKER_PASSWORD`: Your Docker Hub password or access token
 3. `REPO_ACCESS_TOKEN`: A GitHub Personal Access Token with `repo` scope to trigger the deployment workflow
 
@@ -56,8 +56,8 @@ If you prefer to deploy manually:
 1. Start Minikube: `minikube start`
 2. Pull the latest images: 
    ```bash
-   docker pull husnain239/todo-backend:latest
-   docker pull husnain239/todo-frontend:latest
+   docker pull alihamza79/todo-backend:latest
+   docker pull alihamza79/todo-frontend:latest
    ```
 3. Run the deployment script: `./k8s/deploy-all.sh`
 

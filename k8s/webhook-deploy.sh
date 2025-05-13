@@ -4,7 +4,7 @@
 # It can be triggered by a webhook or run manually
 
 # Set your Docker Hub username
-DOCKER_USERNAME="husnain239"
+DOCKER_USERNAME="alihamza79"
 
 # Pull the latest images
 docker pull $DOCKER_USERNAME/todo-backend:latest
