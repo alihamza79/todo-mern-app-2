@@ -11,13 +11,13 @@ docker pull $DOCKER_USERNAME/todo-backend:latest
 docker pull $DOCKER_USERNAME/todo-frontend:latest
 
 # Create a temporary file with the Docker username replaced
-sed "s/\${DOCKER_USERNAME}/$DOCKER_USERNAME/g" k8s/all-in-one-deployment.yaml > k8s/temp-deployment.yaml
+sed "s/\${DOCKER_USERNAME}/$DOCKER_USERNAME/g" all-in-one-deployment.yaml > temp-deployment.yaml
 
 # Apply the Kubernetes manifests
-kubectl apply -f k8s/temp-deployment.yaml
+kubectl apply -f temp-deployment.yaml
 
 # Remove the temporary file
-rm k8s/temp-deployment.yaml
+rm temp-deployment.yaml
 
 # Restart the deployments to pick up new images
 kubectl rollout restart deployment/backend
